@@ -8,13 +8,14 @@ Requires full-disk encryption with pre-boot authentication
 failguard only forces the machine back into its encrypted, locked state.
 Without FDE it protects nothing.
 
-Why?
+  **Why?**
 
 If someone guesses passwords at your lock screen, or pressures you to unlock the machine, a shutdown puts it back into a locked state. The duress account is a decoy you can hand over: using it looks normal but powers the machine off. This only protects you if the disk is encrypted (e.g. Veracrypt) and the machine isn't left in a hibernated or unlocked state. It should therefore also be used in conjunction with DMA protection (like [VCEnhancedKeyClear](https://github.com/EngineOwningSoftware/VCEnhancedKeyClear) enables VeraCrypt's "clear keys when a new device is inserted" option only while the system is locked. Not affiliated. Last updated 2020, so test before relying on it.), since a dedicated attacker might attempt that route first.
 
 It also gives a layer of plausible deniability depending on your jurisdiction, since it will be difficult to prove you purposfully shutdown the pc. I might implement a mode where it bluescreens rather than shutting down normally. 
 
-How to edit it correctly
+  **How to edit it correctly**
+
 Settings: change values in the CONFIG block at the top of the .bat (THRESHOLD, WINDOW, GRACE, TYPES, DRYRUN, and so on). Then run option 1. The watcher reads a generated file in C:\ProgramData\failguard, not the .bat, so nothing takes effect until you reinstall (with option 1 within the command prompt).
 
 Duress names: use option 7, then option 1. Names may use letters, digits, ., _, -, and inner spaces, up to 20 characters.
