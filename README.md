@@ -24,7 +24,10 @@ Test before going live: set DRYRUN=1, reinstall, trigger it, and check the log (
 
 Don't edit the generated failguard.ps1. It gets overwritten on every install. Change the #PS: lines in the .bat instead, and keep the #PS: prefix on every one.
 
-File format: keep the file ASCII with CRLF line endings. Avoid ! in echo text because delayed expansion eats it. Leave LOCKDOWN=1, and don't add /T to the icacls lines, since that's what emptied the file permissions earlier.
+File format: keep the file ASCII with CRLF line endings. Avoid ! in echo text because delayed expansion eats it.
+
+Leave LOCKDOWN=1.
+
 Uninstall: option 6 removes the task and the folder. Duress accounts you created stay until you delete them with net user NAME /delete.
 
 
