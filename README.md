@@ -10,7 +10,7 @@ Without FDE it protects nothing.
 
   **Why?**
 
-If someone guesses passwords at your lock screen, or pressures you to unlock the machine, a shutdown puts it back into a locked state. The duress account is a decoy you can hand over: using it looks normal but powers the machine off. This only protects you if the disk is encrypted (e.g. Veracrypt) and the machine isn't left in a hibernated or unlocked state. It should therefore also be used in conjunction with DMA protection (like [VCEnhancedKeyClear](https://github.com/EngineOwningSoftware/VCEnhancedKeyClear) enables VeraCrypt's "clear keys when a new device is inserted" option only while the system is locked. Not affiliated. Last updated 2020, so test before relying on it.), since a dedicated attacker might attempt that route first.
+If someone guesses passwords at your lock screen, or pressures you to unlock the machine, a shutdown puts it back into a locked state. The duress account is a decoy you can hand over: using it looks normal but powers the machine off. This only protects you if the disk is encrypted (e.g. Veracrypt) and the machine isn't left in a hibernated or unlocked state. It should therefore also be used in conjunction with DMA protection (like [VCEnhancedKeyClear](https://github.com/EngineOwningSoftware/VCEnhancedKeyClear) enables VeraCrypt's "clear keys when a new device is inserted" option only while the system is locked.), since a dedicated attacker might attempt that route first.
 
 It also gives a layer of plausible deniability depending on your jurisdiction, since it will be difficult to prove you purposfully shutdown the pc. I might implement a mode where it bluescreens rather than shutting down normally. 
 
